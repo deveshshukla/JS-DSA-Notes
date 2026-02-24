@@ -7,22 +7,22 @@
  */
 
 /**
- * Que: What is a JavaScript Array?
- * 
- * Ans: A JavaScript array is an ordered collection of elements stored in a single variable. It's a special type of object used to store multiple values of any data type (numbers, strings, objects, functions, etc.) in a list format.
- *    
- *    Key Characteristics:
- *    - Zero-indexed (first element at index 0)
- *    - Dynamic size (can grow or shrink)
- *    - Mutable (elements can be added, removed, or modified)
- *    - Can contain mixed data types
- *    - Technically an object with numeric keys and special 'length' property
+  Que: What is a JavaScript Array?
+  
+  Ans: A JavaScript array is an ordered collection of elements stored in a single variable. It's a special type of object used to store multiple values of any data type (numbers, strings, objects, functions, etc.) in a list format.
+ 
+    Key Characteristics:
+    - Zero-indexed (first element at index 0)
+    - Dynamic size (can grow or shrink)
+    - Mutable (elements can be added, removed, or modified)
+    - Can contain mixed data types
+    - Technically an object with numeric keys and special 'length' property
  */
 
 /**
- * Q: How do you create an Array in JavaScript?
- * 
- * A: There are multiple ways to create arrays:
+  Q: How do you create an Array in JavaScript?
+  
+  A: There are multiple ways to create arrays:
  */
 
 // 1. Array Literal (Recommended)
@@ -43,9 +43,9 @@ const arr8 = Array.from({ length: 3 }, (_, i) => i); // [0, 1, 2]
 const arr9 = [...arr2];                    // Copy of arr2
 
 /**
- * Que: What are the important Array properties and methods?
- * 
- * Ans: 
+ Que: What are the important Array properties and methods?
+ 
+ Ans: 
 
 // Mutating Methods (modify original array):
 // - push(): Add element(s) to end
@@ -70,32 +70,9 @@ const arr9 = [...arr2];                    // Copy of arr2
 
 
 /**
- * Q: What is the difference between mutating and non-mutating methods?
- * 
- * A: 
- *    - Mutating Methods: Modify the original array directly
- *      Examples: push(), pop(), splice(), reverse(), sort()
- *      
- *    - Non-mutating Methods: Return a new array/value without changing original
- *      Examples: slice(), map(), filter(), concat(), join()
- */
-
-const originalArray = [1, 2, 3];
-
-// Mutating example
-originalArray.push(4);
-console.log(originalArray);  // [1, 2, 3, 4] - CHANGED
-
-// Non-mutating example
-const newArray = originalArray.slice(0, 2);
-console.log(originalArray);  // [1, 2, 3, 4] - UNCHANGED
-console.log(newArray);       // [1, 2] - NEW ARRAY
-
-
-/**
- * Q: What are important array iteration methods?
- * 
- * A: These methods help you iterate and transform arrays:
+  Que: What are important array iteration methods?
+  
+  Ans: These methods help you iterate and transform arrays:
  */
 
 const arr = [1, 2, 3, 4, 5];
