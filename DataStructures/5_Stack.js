@@ -1,6 +1,6 @@
 'use strict';
 
-// Stack DS is just a framework based on Principal of 'LIFO' : Last In First Out. Implemented using array.
+// Stack DS is just a framework based on Principal of 'LIFO/FILO' : Last in first out/ First in last out. Implemented using array.
 
 // Stack support operations : push, pop, peek, isEmpty, etc.
 
@@ -34,6 +34,10 @@ class Stack {
     size() {
         return this.Stack.length;
     }
+
+    print() {
+        return this.Stack.toString();
+    }
 };
 
 const stack = new Stack();
@@ -42,12 +46,12 @@ stack.push(1);
 stack.push(20);
 stack.push(4);
 
-stack.pop();
-
-// console.log(stack);
-// console.log(stack.isEmpty());
-// console.log(stack.peek());
-// console.log(stack.size());
+console.log(stack);
+console.log(stack.pop());
+console.log(stack.isEmpty());
+console.log(stack.peek());
+console.log(stack.size());
+console.log(stack.print()+'\n');
 
 
 // Leet Code Problem using Stack
