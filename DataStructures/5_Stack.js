@@ -7,24 +7,24 @@
 // Stack DS Implementation
 class Stack {
     constructor () {
-        this.Stack = []; // empty arr
+        this.items = []; // empty arr
     }
 
     // push element to stack arr
     push(element) {
-        this.Stack.push(element);
+        this.items.push(element);
     }
 
     // remove last inserted element from stack arr
     pop() {
         if (this.isEmpty()) return 'Stack is empty';
-        return this.Stack.pop();
+        return this.items.pop();
     }
 
     // return latest element of a stack arr
     peek() {
         if (this.isEmpty()) return 'Stack is empty';
-        return this.Stack[this.size()-1];
+        return this.items[this.size()-1];
     }
 
     isEmpty() {
@@ -32,11 +32,11 @@ class Stack {
     }
 
     size() {
-        return this.Stack.length;
+        return this.items.length;
     }
 
     print() {
-        return this.Stack.toString();
+        return this.items.toString();
     }
 };
 

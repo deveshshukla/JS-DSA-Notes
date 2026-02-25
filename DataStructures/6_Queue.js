@@ -7,33 +7,33 @@
 // Queue DS Implementation
 class Queue {
     constructor() {
-        this.Queue = [];
+        this.items = [];
     }
 
     //enqueue(push)
     enqueue(element) {
-        this.Queue.push(element);
+        this.items.push(element);
     }
 
     //dequeue(shift)
     dequeue() {
-        return this.Queue.shift();
+        return this.items.shift();
     }
 
     isEmpty() {
-        return this.Queue.length === 0;
+        return this.items.length === 0;
     }
 
     peek() {
-        return !this.isEmpty()? this.Queue[0] : null;
+        return !this.isEmpty()? this.items[0] : null;
     }
 
     size() {
-        return this.Queue.length;
+        return this.items.length;
     }
 
     print() {
-        return this.Queue.toString();
+        return this.items.toString();
     }
 };
 
