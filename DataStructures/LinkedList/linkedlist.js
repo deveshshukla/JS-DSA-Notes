@@ -34,9 +34,7 @@ class LinkedList {
   }
 
   size() {
-    const node = new Node(data);
     let count = 0;
-
     let curr = this.head; // select head
     while (curr) {
         count++;
@@ -49,23 +47,15 @@ class LinkedList {
   // add new node at particular idx
   addAt (idx, value) {
     // if index is invalid reference
-    if (idx < 0 || idx > this.size()) {
-        console.error('Index out of bound');
-        return;
-    }
-
-    const node = new Node(value);
+    if (idx < 0 || idx > this.size()) return;
+    if (idx === 0) return this.updateHead(value);
     
-    // If given idx is 1st then it's head
-    if (idx === 0) {
-        node.next = this.head; // add curr head data in a next
-        this.head = node; // update head node with new value
-        return;
-    }
-
     // Insert node at given idx
+    const node = new Node(value);
+
     let curr = this.head; // select head
-    for (let i=0; i<=idx; i++) curr = curr.next;
+    for (let i=0; i<idx-1; i++) curr = curr.next;
+
     node.next = curr.next;
     curr.next = node;
   }
@@ -108,14 +98,17 @@ class LinkedList {
   }
 
   print() {
-    if (this.size > 0) {
+    if (this.size() > 0) {
         let curr = this.head;
+        let result = "";
         while(curr) {
-            console.log(`${curr.data} => `);
+            result += `${curr.data} => `;
             curr = curr.next;
         }
-    }else
+        console.log(result + "null");
+    } else {
         console.log('LinkedList is empty!');
+    }
   }
 }
 
